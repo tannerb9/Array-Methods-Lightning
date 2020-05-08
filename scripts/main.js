@@ -204,19 +204,27 @@ const businesses = [
 //   0
 // );
 
-const words = [
-  "The",
-  "quick",
-  "brown",
-  "fox",
-  "jumped",
-  "over",
-  "the",
-  "lazy",
-  "dog",
-];
+// const words = [
+//   "The",
+//   "quick",
+//   "brown",
+//   "fox",
+//   "jumped",
+//   "over",
+//   "the",
+//   "lazy",
+//   "dog",
+// ];
 
-const sentence = words.reduce(
-  (currStr, nextStr) => (currStr += nextStr + " "),
-  ""
+// const sentence = words.reduce(
+//   (currStr, nextStr) => (currStr += nextStr + " "),
+//   ""
+// );
+
+// Use the filter method to get all the big spenders(spent > 9k) in the main array into a new one.
+
+// Array to contain all the big spenders
+const bigSpenders = businesses.filter((business) =>
+  business.orders.some((order) => order > 9000)
 );
+console.log(bigSpenders);
