@@ -204,19 +204,24 @@ const businesses = [
 //   0
 // );
 
-const words = [
-  "The",
-  "quick",
-  "brown",
-  "fox",
-  "jumped",
-  "over",
-  "the",
-  "lazy",
-  "dog",
-];
+// const words = [
+//   "The",
+//   "quick",
+//   "brown",
+//   "fox",
+//   "jumped",
+//   "over",
+//   "the",
+//   "lazy",
+//   "dog",
+// ];
 
-const sentence = words.reduce(
-  (currStr, nextStr) => (currStr += nextStr + " "),
-  ""
+// const sentence = words.reduce(
+//   (currStr, nextStr) => (currStr += nextStr + " "),
+//   ""
+// );
+
+const bigSpenders = businesses.filter((business) =>
+  business.orders.some((order) => order > 9000)
 );
+console.log(bigSpenders);
