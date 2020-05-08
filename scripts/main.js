@@ -111,36 +111,112 @@ const businesses = [
   },
 ];
 
-const outEl = document.querySelector("#output");
-outEl.innerHTML = "<h1>Active Businesses</h1>";
+// const outEl = document.querySelector("#output");
+// outEl.innerHTML = `<h1>Active Businesses</h1>`;
 
-// Add another section sibling to the current one and use object dot notation
-// to display each company's city. Use square bracket notation to display the state
-// code. Use dynamic square bracket notation to add the zip code.
-let zipCode = "addressZipCode";
+// let zipCode = "addressZipCode";
 
-businesses.forEach((business) => {
-  outEl.innerHTML += `
-    <h2>${business.companyName}</h2>
-    <section>
-      ${business.addressFullStreet}
-    </section>
-    <section>
-      ${business.addressCity}, ${business["addressStateCode"]} ${business[zipCode]}
-    </section>
-  `;
-  outEl.innerHTML += "<hr/>";
-});
+// const nyBusinesses = businesses.filter((business) => {
+//   let inNY = false;
+//   if (business.addressStateCode === "NY") {
+//     inNY = true;
+//   }
+//   return inNY;
+// });
 
-Declare function.
-Accepts "state" as parameter.
-If statement to target func arg
-add results to innerHTML 
+// const manufacturingBusinesses = businesses.filter((business) => {
+//   let manufacturer = false;
+//   if (business.companyIndustry === "Manufacturing") {
+//     manufacturer = true;
+//   }
+//   return manufacturer;
+// });
 
-const businessesByState =
+// businesses.forEach((business) => {
+//   outEl.innerHTML += `
+//     <h2>${business.companyName}</h2>
+//     <section>
+//       ${business.addressFullStreet}
+//     </section>
+//     <section>
+//       ${business.addressCity}, ${business["addressStateCode"]} ${business[zipCode]}
+//     </section>
+//   `;
+//   outEl.innerHTML += "<hr/>";
+// });
 
-const nyBusinesses = 
+// outEl.innerHTML += "<h1>Purchasing Agents</h1>";
 
-  if (business.addressStateCode == "NY") {
-    outEl.innerHTML += 
-  }
+// const agents = businesses.map((business) => {
+//   return {
+//     fullName:
+//       business.purchasingAgent.nameFirst +
+//       " " +
+//       business.purchasingAgent.nameLast,
+//     company: business.companyName,
+//     number: business.phoneWork,
+//   };
+// });
+
+// agents.forEach((agent) => {
+//   outEl.innerHTML += `
+//   <h2>${agent.fullName}</h2>
+//   <section>${agent.company}</section>
+//   <section>${agent.number}</section>`;
+//   outEl.innerHTML += "<hr/>";
+// });
+// document
+//   .querySelector("#companySearch")
+//   .addEventListener("keypress", (keyPressEvent) => {
+//     if (keyPressEvent.charCode === 13) {
+//       const foundAgent = businesses.find(
+//         (agent) =>
+//           agent.purchasingAgent.nameFirst
+//             .toLowerCase()
+//             .includes(keyPressEvent.target.value) ||
+//           agent.purchasingAgent.nameLast
+//             .toLowerCase()
+//             .includes(keyPressEvent.target.value)
+//       );
+//       const fullName =
+//         foundAgent.purchasingAgent.nameFirst +
+//         " " +
+//         foundAgent.purchasingAgent.nameLast;
+//       outEl.innerHTML = `
+//                   <h2>
+//                   ${fullName}
+//                   </h2>
+//                   <section>
+//                   Company: ${foundAgent.companyName}
+//                   </section>
+//                   <section>
+//                   Phone: ${foundAgent.phoneWork}
+//                   </section>
+
+//               `;
+//     }
+//   });
+
+// const monthlyRainfall = [23, 13, 27, 20, 20, 31, 33, 26, 19, 12, 14, 12, 10];
+
+// const totalRainfall = monthlyRainfall.reduce(
+//   (currentVal, nextVal) => (currentVal += nextVal),
+//   0
+// );
+
+const words = [
+  "The",
+  "quick",
+  "brown",
+  "fox",
+  "jumped",
+  "over",
+  "the",
+  "lazy",
+  "dog",
+];
+
+const sentence = words.reduce(
+  (currStr, nextStr) => (currStr += nextStr + " "),
+  ""
+);
